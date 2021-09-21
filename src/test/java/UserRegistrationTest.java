@@ -5,8 +5,15 @@ public class UserRegistrationTest {
 	@Test
 	public void firstname_valid() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validateFirstName("Panchami");
-		Assert.assertTrue(result);
+		boolean result;
+		try {
+			result = user.validateFirstName("Panchami");
+			Assert.assertTrue(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -16,19 +23,32 @@ public class UserRegistrationTest {
 	@Test
 	public void firstname_short() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validateFirstName("Pa");
-		Assert.assertFalse(result);
+		boolean result;
+		try {
+			result = user.validateFirstName("Pa");
+			Assert.assertFalse(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
 	}
 
 	/**
 	 * Test should pass because we are checking invalid first name that doesn't
 	 * start with capital letter
+	 * 
 	 */
 	@Test
 	public void firstname_withoutcapitalcharacter() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validateFirstName("panchami");
-		Assert.assertFalse(result);
+		boolean result;
+		try {
+			result = user.validateFirstName("panchami");
+			Assert.assertFalse(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
 	}
 
 	/**
@@ -37,8 +57,15 @@ public class UserRegistrationTest {
 	@Test
 	public void lastname_valid() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validateLastName("Shenoy");
-		Assert.assertTrue(result);
+		boolean result;
+		try {
+			result = user.validateLastName("Shenoy");
+			Assert.assertTrue(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -48,8 +75,15 @@ public class UserRegistrationTest {
 	@Test
 	public void lastname_short() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validateLastName("Sh");
-		Assert.assertFalse(result);
+		boolean result;
+		try {
+			result = user.validateLastName("Sh");
+			Assert.assertFalse(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -59,8 +93,15 @@ public class UserRegistrationTest {
 	@Test
 	public void lastname_withoutcapitalcharacter() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validateLastName("shenoy");
-		Assert.assertFalse(result);
+		boolean result;
+		try {
+			result = user.validateLastName("shenoy");
+			Assert.assertFalse(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -69,8 +110,15 @@ public class UserRegistrationTest {
 	@Test
 	public void phone_valid() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validatePhoneNumber("91 9110689660");
-		Assert.assertTrue(result);
+		boolean result;
+		try {
+			result = user.validatePhoneNumber("91 9110689660");
+			Assert.assertTrue(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -80,8 +128,15 @@ public class UserRegistrationTest {
 	@Test
 	public void phone_short() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validatePhoneNumber("91 91106896");
-		Assert.assertFalse(result);
+		boolean result;
+		try {
+			result = user.validatePhoneNumber("91 91106896");
+			Assert.assertFalse(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -91,8 +146,15 @@ public class UserRegistrationTest {
 	@Test
 	public void phone_beginswithzero() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validatePhoneNumber("91 0110689660");
-		Assert.assertFalse(result);
+		boolean result;
+		try {
+			result = user.validatePhoneNumber("91 0110689660");
+			Assert.assertFalse(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -101,8 +163,15 @@ public class UserRegistrationTest {
 	@Test
 	public void email_valid() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validateEmail("panchamishenoy16@gmail.com");
-		Assert.assertTrue(result);
+		boolean result;
+		try {
+			result = user.validateEmail("panchamishenoy16@gmail.com");
+			Assert.assertTrue(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -111,8 +180,15 @@ public class UserRegistrationTest {
 	@Test
 	public void email_invalid() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validateEmail("panchami.com");
-		Assert.assertFalse(result);
+		boolean result;
+		try {
+			result = user.validateEmail("panchami.com");
+			Assert.assertFalse(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -121,8 +197,15 @@ public class UserRegistrationTest {
 	@Test
 	public void password_valid() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validatePassword("P1@abcdefhg");
-		Assert.assertTrue(result);
+		boolean result;
+		try {
+			result = user.validatePassword("P1@abcdefhg");
+			Assert.assertTrue(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -132,8 +215,15 @@ public class UserRegistrationTest {
 	@Test
 	public void password_withoutcapitalletter() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validatePassword("p1@abcdefgh");
-		Assert.assertFalse(result);
+		boolean result;
+		try {
+			result = user.validatePassword("p1@abcdefgh");
+			Assert.assertFalse(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -142,8 +232,15 @@ public class UserRegistrationTest {
 	@Test
 	public void password_withoutdigit() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validatePassword("P@abcdefghi");
-		Assert.assertFalse(result);
+		boolean result;
+		try {
+			result = user.validatePassword("P@abcdefghi");
+			Assert.assertFalse(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	/**
@@ -153,8 +250,15 @@ public class UserRegistrationTest {
 	@Test
 	public void password_withoutspecialchar() {
 		UserRegistration user = new UserRegistration();
-		boolean result = user.validatePassword("Pabcdefgh1");
-		Assert.assertFalse(result);
+		boolean result;
+		try {
+			result = user.validatePassword("Pabcdefgh1");
+			Assert.assertFalse(result);
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 }
