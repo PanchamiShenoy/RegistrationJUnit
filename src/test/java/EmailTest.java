@@ -1,4 +1,3 @@
-
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -48,7 +47,12 @@ public class EmailTest {
 	 */
 	@Test
 	public void emailtesting_withparameterized_approach() {
-		Assert.assertEquals(expectedResult, user.validateEmail(email));
+		try {
+			Assert.assertEquals(expectedResult, user.validateEmail(email));
+		} catch (InvalidUserDetailException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
 	}
 
 }
