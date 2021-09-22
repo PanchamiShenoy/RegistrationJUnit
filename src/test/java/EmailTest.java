@@ -13,7 +13,7 @@ public class EmailTest {
 
 	private String email;
 	private boolean expectedResult;
-	private UserRegistration user;
+	private UserRegistrationLambda user;
 
 	public EmailTest(String email, boolean expectedResult) {
 		super();
@@ -24,7 +24,7 @@ public class EmailTest {
 
 	@Before
 	public void initialise() {
-		user = new UserRegistration();
+		user = new UserRegistrationLambda();
 	}
 
 	/**

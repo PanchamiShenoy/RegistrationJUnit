@@ -1,10 +1,10 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class UserRegistrationTest {
+public class UserRegistrationLambdaTest {
 	@Test
 	public void firstname_valid() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validateFirstName("Panchami");
@@ -22,7 +22,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void firstname_short() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validateFirstName("Pa");
@@ -40,7 +40,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void firstname_withoutcapitalcharacter() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validateFirstName("panchami");
@@ -56,7 +56,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void lastname_valid() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validateLastName("Shenoy");
@@ -74,7 +74,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void lastname_short() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validateLastName("Sh");
@@ -92,7 +92,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void lastname_withoutcapitalcharacter() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validateLastName("shenoy");
@@ -109,7 +109,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void phone_valid() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validatePhoneNumber("91 9110689660");
@@ -127,7 +127,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void phone_short() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validatePhoneNumber("91 91106896");
@@ -145,7 +145,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void phone_beginswithzero() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validatePhoneNumber("91 0110689660");
@@ -162,7 +162,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void email_valid() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validateEmail("panchamishenoy16@gmail.com");
@@ -179,7 +179,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void email_invalid() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validateEmail("panchami.com");
@@ -196,7 +196,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void password_valid() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validatePassword("P1@abcdefhg");
@@ -214,7 +214,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void password_withoutcapitalletter() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validatePassword("p1@abcdefgh");
@@ -231,7 +231,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void password_withoutdigit() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validatePassword("P@abcdefghi");
@@ -249,7 +249,7 @@ public class UserRegistrationTest {
 	 */
 	@Test
 	public void password_withoutspecialchar() {
-		UserRegistration user = new UserRegistration();
+		UserRegistrationLambda user = new UserRegistrationLambda();
 		boolean result;
 		try {
 			result = user.validatePassword("Pabcdefgh1");
